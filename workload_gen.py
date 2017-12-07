@@ -9,7 +9,7 @@ def run(context):
     workload = context.v1.workload
     exp_helper = utils.ExperimentHelper(context)
     logger.info(workload.resources)
-    my_resource = exp_helper.get_resource(workload.resources['cpu_stressor_resource'])
+    my_resource = exp_helper.get_resource(workload.resources['cpu_stressor'])
     logger.info(my_resource)
     logger.info('{}'.format(workload.params['greeting']))
     logger.info('I\'m workload generator {}'.format(workload.name))
