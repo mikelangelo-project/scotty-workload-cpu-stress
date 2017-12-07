@@ -8,6 +8,7 @@ logger = logging.getLogger(__name__)
 def run(context):
     workload = context.v1.workload
     exp_helper = utils.ExperimentHelper(context)
+    logger.info(workload.resources)
     my_resource = exp_helper.get_resource(workload.resources['cpu_stressor_resource'])
     logger.info(my_resource)
     logger.info('{}'.format(workload.params['greeting']))
