@@ -15,7 +15,7 @@ def run(context):
     logger.info('I\'m workload generator {}'.format(workload.name))
     seconds_delay = 60*60*24
     for minute in range(seconds_delay):
-        time.sleep(60)
+        time.sleep(1)
     #logger.info('The resource endpoint is {}'.format(cpu_stress_resource.endpoint))
     return 42
 
