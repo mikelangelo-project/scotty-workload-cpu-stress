@@ -13,7 +13,9 @@ def run(context):
     #cpu_stress_resource = exp_helper.get_resource(workload.resources['cpu_stressor'])
     #logger.info(cpu_stress_resource)
     logger.info('I\'m workload generator {}'.format(workload.name))
-    time.sleep(3600*12)
+    seconds_delay = 60*60*24
+    for minute in range(seconds_delay):
+        time.sleep(60)
     #logger.info('The resource endpoint is {}'.format(cpu_stress_resource.endpoint))
     return 42
 
